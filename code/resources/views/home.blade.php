@@ -6,6 +6,11 @@
 		background-color: #f24f5f;
 	}
 
+	#next-button {
+		background-color: #343A40;
+		border-color: #303135;
+	}
+
 	@media screen and (min-width: 768px) {
 		h1 {
 			padding-top: 10%;
@@ -40,6 +45,9 @@
 			<div class="row justify-content-center" id="search">
 				<div class="col-6">
 					<input type="text" class="form-control" placeholder="What would you like to buy?" id="search-bar" name="">
+				</div>
+				<div class="col-2">
+					<button class="btn btn-primary" id="next-button">Next</button>
 				</div>
 			</div>
 
