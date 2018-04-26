@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 03, 2018 at 02:16 PM
+-- Generation Time: Apr 26, 2018 at 12:52 AM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -23,6 +23,20 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `catID` int(11) NOT NULL AUTO_INCREMENT,
+  `catName` varchar(50) NOT NULL,
+  PRIMARY KEY (`catID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `migrations`
 --
@@ -34,6 +48,13 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(1, '2014_10_12_000000_create_users_table', 1);
 
 -- --------------------------------------------------------
 
@@ -47,6 +68,50 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pic`
+--
+
+DROP TABLE IF EXISTS `pic`;
+CREATE TABLE IF NOT EXISTS `pic` (
+  `picID` int(11) NOT NULL AUTO_INCREMENT,
+  `picUrl` varchar(50) NOT NULL,
+  `picUploadDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`picID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `postpic`
+--
+
+DROP TABLE IF EXISTS `postpic`;
+CREATE TABLE IF NOT EXISTS `postpic` (
+  `postID` int(11) NOT NULL,
+  `picID` int(11) NOT NULL,
+  PRIMARY KEY (`postID`,`picID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `posts`
+--
+
+DROP TABLE IF EXISTS `posts`;
+CREATE TABLE IF NOT EXISTS `posts` (
+  `postID` int(11) NOT NULL AUTO_INCREMENT,
+  `postTitle` varchar(50) NOT NULL,
+  `postDesc` varchar(2000) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `catID` int(11) DEFAULT NULL,
+  `creattionDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`postID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -65,7 +130,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Adam', NULL, 'Ght@tght.cn', '$2y$10$nf75wlg1E11OWiQitfh4zOXq/vL.jeVw2kOqldkLCrq5BanH0XV.C', 'BNOnEfqYv8yRkSQZFFdCV8yvj66ddf8oVIv0hq5vccaCExscWY5a5h8ps4j5', '2018-04-03 17:57:59', '2018-04-03 17:57:59'),
+(2, 'This', NULL, 'rst@gh.com', '$2y$10$x05F1yVrj/CWEVJZqiFePO2ySTmN5Ufsy3Z97ur5ehzdz5f5ZlrFu', 'jrmy7YyqA9Wrte21PP9aFDENarkXdRlbgBqjBUhhOjYheCoBpIzRdlhO8a72', '2018-04-03 18:05:27', '2018-04-03 18:05:27'),
+(3, 'Adam Joyner', NULL, 'joynerar@miamioh.edu', '$2y$10$pIfC3/Wxs2xyWAlkZAo.duyNlS.l4CZi5Orere0LHsdv8NaYiV.Vi', 'L7RIwGxMjCQFz2ypMLIK5TIn1xlBBjoIN1LK1CYDVPvz612zQXYlsJy2wo07', '2018-04-03 18:31:40', '2018-04-03 18:31:40');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
