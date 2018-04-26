@@ -11,6 +11,16 @@
 		border-color: #303135;
 	}
 
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: rgba(255,255,255,.6);
+    }
+
 	@media screen and (min-width: 768px) {
 		h1 {
 			padding-top: 10%;
@@ -30,7 +40,7 @@
 @stop
 
 @section('body')
-	@extends('layouts.nav-home')
+	@extends('layouts.nav-auth')
 
 	<div id="main-wrapper">
 		<div class="container">
@@ -52,7 +62,7 @@
 					<input type="text" class="form-control" placeholder="What would you like to buy?" id="search-bar" name="">
 				</div>
 				<div class="col-2">
-					<button class="btn btn-primary" id="next-button">Next</button>
+					<button class="btn btn-primary" id="next-button"><a href="/buy-details">Next</a></button>
 				</div>
 			</div>
 

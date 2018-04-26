@@ -23,3 +23,7 @@ Route::get('signup', function () {
 Route::get('home', function () {
     return view('home');
 });
+
+Route::get('buy-details', function () {
+    return view('buy-details');
+});

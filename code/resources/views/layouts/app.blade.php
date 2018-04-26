@@ -25,6 +25,12 @@
              color: #FFFFFF;
         }
 
+        #navbar_list ul.navbar-nav li a:hover {
+             font-family: roboto;
+             text-decoration: none;
+             color: rgba(255,255,255,.6);
+        }
+
         #navbar_list ul.navbar-nav li a.hover {
             text-decoration: underline;
         }
