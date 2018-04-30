@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('signup', function () {
-    return view('signup');
+    return view('auth/register');
 });
 
 Route::get('home', function () {
