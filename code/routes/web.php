@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('landing');
 });
 
+Auth::routes();
 
 Route::get('signup', function () {
     return view('signup');
