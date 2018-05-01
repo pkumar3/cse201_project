@@ -28,3 +28,11 @@ Route::get('home', function () {
 Route::get('buy-details', function () {
     return view('buy-details');
 });
+
+Route::get('my-posts', function () {
+    return view('my-posts');
+});
+
+Route::get('sell', function () {
+    return view('sell');
+});

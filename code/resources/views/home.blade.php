@@ -11,6 +11,23 @@
 		border-color: #303135;
 	}
 
+    h1 {
+        margin-top: 5%;
+    }
+
+    #heading {
+        font-size: 24px;
+    }
+
+    #description {
+        font-size: 20px;
+    }
+
+    .icon {
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+
     a {
         text-decoration: none;
         color: #ffffff;
@@ -23,8 +40,16 @@
 
 	@media screen and (min-width: 768px) {
 		h1 {
-			padding-top: 10%;
+			padding-top: 2%;
 		}
+
+        #heading {
+            font-size: 42px;
+        }
+
+        #description {
+            font-size: 28px;
+        }
 
 		#search {
 			padding-top: 5%;
@@ -46,14 +71,14 @@
 		<div class="container">
 			
 			<div class="row">
-				<div class="col-md-12">
-					<h1>Connecting Sellers to Buyers</h1>
+				<div class="col-8">
+					<h1 id="heading">Connecting Sellers to Buyers</h1>
 				</div>
 			</div><!-- /.row -->
 
 			<div class="row">
-				<div class="col-md-12">
-					<h3>Search for items you want to buy</h3>
+				<div class="col-12">
+					<h3 id="description">Search for items you want to buy</h3>
 				</div>
 			</div>
 

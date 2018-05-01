@@ -10,7 +10,7 @@
                 <div class="p-2"><li><a href="">About</a></li></div>
                 <div class="p-2"><li><a href="">Contact</a></li></div>
                 <div class="p-2"><li><a href="/signup">Sign Up</a></li></div>
-                <div class="p-2"><li><a href="">Log In</a></li></div>
+                <div class="p-2"><li><a href="/login">Log In</a></li></div>
             </ul>
         </div><!-- /.nav-collapse -->
     </div>
