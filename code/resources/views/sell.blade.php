@@ -45,9 +45,9 @@
 					  </div>
 					  <div class="card-body">
 					    <h5 class="card-title">Sharpie</h5>
-					    <p class="card-text">Quantity: 1</p>
-					    <p class="card-text">Price: $1</p>
-					    <a href="#" class="btn btn-primary">Contact</a>
+					    <p class="card-text">Quantity: 3</p>
+					    <p class="card-text">Price: $2</p>
+					    <a href="#" id="contact-button" class="btn btn-primary">Contact</a>
 					  </div>
 					</div>	
 				</div>
@@ -55,5 +55,12 @@
 
 		</div>
 	</div>
+@stop
 
+@section('js')
+<script type="text/javascript">
+	$("#contact-button").click( function() {
+		$("#contact-button").html('513-091-1199 <br> test@t.com')
+	})
+</script>
 @stop

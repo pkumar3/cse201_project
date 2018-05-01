@@ -38,8 +38,8 @@
 					  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
 					  <div class="card-body">
 					    <h5 class="card-title">Sharpie</h5>
-					    <p class="card-text">Quantity: 1</p>
-					    <p class="card-text">Price: $1</p>
+					    <p class="card-text">Quantity: 3</p>
+					    <p class="card-text">Price: $2</p>
 					    <a href="#" class="btn btn-primary">Edit</a>
 					  </div>
 					</div>	
