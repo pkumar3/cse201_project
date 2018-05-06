@@ -25,9 +25,8 @@ Route::get('home', function () {
     return view('home');
 });
 
-Route::get('buy-details', function () {
-    return view('buy-details');
-});
+	
+Route::get('buy-details', ['uses' => 'homeController@getPosts']);
 
 Route::get('my-posts', function () {
     return view('my-posts');
