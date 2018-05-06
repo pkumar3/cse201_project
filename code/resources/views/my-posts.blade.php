@@ -4,6 +4,7 @@
 <style type="text/css">
 	#main-wrapper {
 		background-color: #f24f5f;
+		height: 100vh;
 	}
 
 	@media screen and (min-width: 768px) {
@@ -40,7 +41,7 @@
 					    <h5 class="card-title">Sharpie</h5>
 					    <p class="card-text">Quantity: 3</p>
 					    <p class="card-text">Price: $2</p>
-					    <a href="#" class="btn btn-primary">Edit</a>
+					    <a href="/buy-details" class="btn btn-primary">Edit</a>
 					  </div>
 					</div>	
 				</div>

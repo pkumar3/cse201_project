@@ -1,5 +1,18 @@
 @extends('layouts.app')
 
+@section('css')
+<style type="text/css">
+    .card {
+        margin-top: 2%;
+    }
+
+    #main-wrapper {
+        background-color: #f24f5f;
+        height: 100vh;
+    }
+</style>
+@stop
+
 @section('body')
 <div class="container">
     <div class="row justify-content-center">

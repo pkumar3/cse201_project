@@ -4,6 +4,7 @@
 <style type="text/css">
 	#main-wrapper {
 		background-color: #f24f5f;
+		height: 100vh;
 	}
 
 	.btn-primary {
@@ -36,6 +37,8 @@
 					<h2>Posts</h2>
 				</div>
 			</div><!-- /.row -->
+
+			<hr>
 
 			<div class="row">
 				<div class="col-md-12">
