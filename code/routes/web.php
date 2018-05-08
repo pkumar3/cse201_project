@@ -28,7 +28,7 @@ Route::get('home', function () {
 	
 //Route::get('buy-details', ['uses' => 'homeController@getPosts']);
 Route::get('my-posts', ['uses' => 'HomeController@myPosts']);
-Route::get('sell', ['uses' => 'homeController@getPosts']);
+Route::get('sell', ['uses' => 'HomeController@getPosts']);
 
 Route::post('startPost', function (){
 	$postTitle = Request::input('postTitle');
