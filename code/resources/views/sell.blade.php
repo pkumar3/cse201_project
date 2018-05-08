@@ -43,7 +43,6 @@
 				<div class="col-4">
 					
 					<div class="card" style="width: 15rem;">
-					  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
 					  <div class="card-body">
 					  <form action="editPost" method="post" style="display:contents">
 						<h5 class="card-title">{{ $post->postTitle }}</h5>
