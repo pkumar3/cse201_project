@@ -66,12 +66,12 @@
 		}
 
         #search-bar {
-            width: 80%;
+            width: 70%;
             margin-left: 10%;
         }
 
         #next-button {
-            margin-left: -60%;
+            margin-left: -80%;
         }
 
 		.icon {

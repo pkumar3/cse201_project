@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use DB;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -23,7 +24,7 @@ class HomeController extends Controller
 
     public function myPosts()
     {
-    	$posts = DB::table('posts')->get();
+    	$posts = DB::table('posts')->where('userID', Auth::id())->get();
 
     	return view('my-posts', ['posts' => $posts]);
     }
