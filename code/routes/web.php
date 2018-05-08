@@ -25,6 +25,7 @@ Route::get('home', function () {
     return view('home');
 });
 
+Route::get('/logout', 'HomeController@logout');
 	
 //Route::get('buy-details', ['uses' => 'homeController@getPosts']);
 Route::get('my-posts', ['uses' => 'HomeController@myPosts']);
