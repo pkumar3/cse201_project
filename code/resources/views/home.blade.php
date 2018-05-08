@@ -102,11 +102,15 @@
 			</div>
 
 			<div class="row justify-content-center" id="search">
-				<div id="form" class="col-8">
-					<input type="text" class="form-control" placeholder="What would you like to buy?" id="search-bar" name="">
-				</div>
-				<div class="col-2">
-					<button class="btn btn-primary" id="next-button"><a href="/buy-details">Next</a></button>
+				<form method="POST" action="startPost" style="display:contents">
+					<div class="col-6">
+						<input type="text" class="form-control" placeholder="What would you like to buy?" id="search-bar" name="postTitle">
+					</div>
+					<div class="col-2">
+						{{ csrf_field() }}
+						<button class="btn btn-primary" type="" id="next-button">Next</button>
+					</div>
+				</form>
 				</div>
 			</div>
 

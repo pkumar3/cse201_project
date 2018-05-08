@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use DB;
-use Auth;
 
 class HomeController extends Controller
 {
@@ -19,12 +18,12 @@ class HomeController extends Controller
         $posts = DB::table('posts')->get();
 		//$posts = DB::select('SELECT postTitle FROM posts');
 
-        return view('buy-Details', ['posts' => $posts]);
+        return view('sell', ['posts' => $posts]);
     }
 
     public function myPosts()
     {
-    	$posts = DB::table('posts')->where('userID', Auth::id())->get();
+    	$posts = DB::table('posts')->get();
 
     	return view('my-posts', ['posts' => $posts]);
     }

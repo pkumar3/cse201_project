@@ -58,19 +58,19 @@
 							<h3>Item Details</h3>
 						</div>
 						<div class="card-body">
-							@foreach($posts as $post)
-							<p>Item Name: {{ $post->postTitle }}</p>
-							@endforeach
-						<form>
+						<form action="createPost" method="Post">
+							<p>Item Name: {{ $postTitle }}</p>
+							{{ csrf_field() }}
+							<input type="hidden" name="postTitle" value="{{ $postTitle }}">
 							<div class="form-group">
 								<label for="qty">Quantity</label>
-						    	<input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter qunantity">
+						    	<input type="number" name="qty" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter qunantity">
 						  	</div>
 						  	<div class="form-group">
 						    	<label for="price">Price Limit</label>
-						    	<input type="number" class="form-control" id="price-limit" placeholder="Max amount">
+						    	<input type="number" name="price" class="form-control" id="price-limit" placeholder="Max amount">
 						  	</div>
-						  	<button type="submit" class="btn btn-primary"><a href="/my-posts">Post</a></button>
+						  	<button type="submit" class="btn btn-primary">Post</button>
 						</form>
 						</div>
 						
