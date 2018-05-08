@@ -46,15 +46,18 @@
 					<div class="card" style="width: 15rem;">
 					  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
 					  <div class="card-body">
-					    <h5 class="card-title">{{ $post->postTitle }}</h5>
-					    <p class="card-text">Quantity: 3</p>
-					    <p class="card-text">Price Limit: $2</p>
-					    <p class="card-text">Posted On: {{ $post->creationDate }}</p>
-					    <a href="/buy-details" class="btn btn-primary">Edit</a>
-					    <a href="/buy-details" id="delete-button" class="btn btn-primary">Delete</a>
+					  <form action="editPost" method="post" style="display:contents">
+						<h5 class="card-title">{{ $post->postTitle }}</h5>
+						<p class="card-text">Quantity: {{$post->postQty}}</p>
+						<p class="card-text">Price Limit: ${{$post->postPrice}}</p>
+						<p class="card-text">Posted On: {{ $post->creationDate }}</p>
+						<a href="#" class="btn btn-primary">Edit</a>
+						{{ csrf_field() }}
+						<input type="hidden" name="postID" value="{{ $post->postID }}">
+						<button type="submit" id="delete-button" class="btn btn-primary">Delete</button>
+						</form>
 					  </div>
-					</div>	
-					
+					</div>		
 				</div>
 				@endforeach
 			</div><!-- /.row -->

@@ -27,11 +27,7 @@ Route::get('home', function () {
 
 	
 //Route::get('buy-details', ['uses' => 'homeController@getPosts']);
-
-Route::get('my-posts', function () {
-    return view('my-posts');
-});
-
+Route::get('my-posts', ['uses' => 'HomeController@myPosts']);
 Route::get('sell', ['uses' => 'homeController@getPosts']);
 
 Route::post('startPost', function (){
@@ -46,6 +42,12 @@ Route::post('createPost', function(){
 	DB::table('posts')->insert(
 		[ 'postTitle' => $postTitle, 'userID' => $userID,'postQTY' => $qty, 'postPrice' => $price ]
 	);
+	header('location:my-posts');
+	die();
+});
+
+Route::post('editPost', function(){
+	DB::table('posts')->where('postID', '=', Request::input('postID'))->delete();
 	header('location:my-posts');
 	die();
 });
