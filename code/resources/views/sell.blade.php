@@ -4,7 +4,6 @@
 <style type="text/css">
 	#main-wrapper {
 		background-color: #f24f5f;
-		height: 100vh;
 	}
 
 	.btn-primary {
