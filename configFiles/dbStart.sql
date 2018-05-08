@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 08, 2018 at 02:34 PM
+-- Generation Time: May 08, 2018 at 11:34 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -115,18 +115,20 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `postQty` int(11) NOT NULL DEFAULT '1',
   `postPrice` int(11) NOT NULL,
   PRIMARY KEY (`postID`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`postID`, `postTitle`, `postDesc`, `userID`, `catID`, `creationDate`, `postQty`, `postPrice`) VALUES
-(1, 'Pencil', '#2 pencil ', 1, NULL, '2018-05-06 20:34:44', 1, 0),
 (2, 'Chair', 'Looking for an old wooden chair ', 2, NULL, '2018-05-06 20:57:50', 1, 0),
 (3, 'This is a test', NULL, 1, NULL, '2018-05-08 14:20:53', 4, 4),
 (4, 'tes', NULL, 1, NULL, '2018-05-08 14:25:33', 2, 4),
-(5, 'tes', NULL, 1, NULL, '2018-05-08 14:26:13', 2, 4);
+(5, 'tes', NULL, 1, NULL, '2018-05-08 14:26:13', 2, 4),
+(6, 'item', NULL, 3, NULL, '2018-05-08 14:57:45', 4, 66),
+(7, 'Hat', NULL, 3, NULL, '2018-05-08 17:32:46', 2, 5),
+(8, 'Hat', NULL, 3, NULL, '2018-05-08 17:41:29', 2, 5);
 
 -- --------------------------------------------------------
 
