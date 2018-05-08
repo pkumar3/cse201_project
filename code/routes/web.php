@@ -42,8 +42,9 @@ Route::post('createPost', function(){
 	$postTitle = Request::input('postTitle');
 	$qty= Request::input('qty');
 	$price = Request::input('price');
+	$userID = Auth::id();
 	DB::table('posts')->insert(
-		[ 'postTitle' => $postTitle, 'postQTY' => $qty, 'postPrice' => $price ]
+		[ 'postTitle' => $postTitle, 'userID' => $userID,'postQTY' => $qty, 'postPrice' => $price ]
 	);
 	header('location:my-posts');
 	die();
