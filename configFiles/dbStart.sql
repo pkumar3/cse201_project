@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 26, 2018 at 12:52 AM
+-- Generation Time: May 08, 2018 at 02:34 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `laravellogin`
 --
+CREATE DATABASE IF NOT EXISTS `laravellogin` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `laravellogin`;
 
 -- --------------------------------------------------------
 
@@ -106,12 +108,25 @@ DROP TABLE IF EXISTS `posts`;
 CREATE TABLE IF NOT EXISTS `posts` (
   `postID` int(11) NOT NULL AUTO_INCREMENT,
   `postTitle` varchar(50) NOT NULL,
-  `postDesc` varchar(2000) NOT NULL,
-  `userID` int(11) NOT NULL,
+  `postDesc` varchar(2000) DEFAULT NULL,
+  `userID` int(11) NOT NULL DEFAULT '1',
   `catID` int(11) DEFAULT NULL,
-  `creattionDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `creationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `postQty` int(11) NOT NULL DEFAULT '1',
+  `postPrice` int(11) NOT NULL,
   PRIMARY KEY (`postID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`postID`, `postTitle`, `postDesc`, `userID`, `catID`, `creationDate`, `postQty`, `postPrice`) VALUES
+(1, 'Pencil', '#2 pencil ', 1, NULL, '2018-05-06 20:34:44', 1, 0),
+(2, 'Chair', 'Looking for an old wooden chair ', 2, NULL, '2018-05-06 20:57:50', 1, 0),
+(3, 'This is a test', NULL, 1, NULL, '2018-05-08 14:20:53', 4, 4),
+(4, 'tes', NULL, 1, NULL, '2018-05-08 14:25:33', 2, 4),
+(5, 'tes', NULL, 1, NULL, '2018-05-08 14:26:13', 2, 4);
 
 -- --------------------------------------------------------
 
@@ -130,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
@@ -139,7 +154,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Adam', NULL, 'Ght@tght.cn', '$2y$10$nf75wlg1E11OWiQitfh4zOXq/vL.jeVw2kOqldkLCrq5BanH0XV.C', 'BNOnEfqYv8yRkSQZFFdCV8yvj66ddf8oVIv0hq5vccaCExscWY5a5h8ps4j5', '2018-04-03 17:57:59', '2018-04-03 17:57:59'),
 (2, 'This', NULL, 'rst@gh.com', '$2y$10$x05F1yVrj/CWEVJZqiFePO2ySTmN5Ufsy3Z97ur5ehzdz5f5ZlrFu', 'jrmy7YyqA9Wrte21PP9aFDENarkXdRlbgBqjBUhhOjYheCoBpIzRdlhO8a72', '2018-04-03 18:05:27', '2018-04-03 18:05:27'),
-(3, 'Adam Joyner', NULL, 'joynerar@miamioh.edu', '$2y$10$pIfC3/Wxs2xyWAlkZAo.duyNlS.l4CZi5Orere0LHsdv8NaYiV.Vi', 'L7RIwGxMjCQFz2ypMLIK5TIn1xlBBjoIN1LK1CYDVPvz612zQXYlsJy2wo07', '2018-04-03 18:31:40', '2018-04-03 18:31:40');
+(3, 'Adam Joyner', NULL, 'joynerar@miamioh.edu', '$2y$10$pIfC3/Wxs2xyWAlkZAo.duyNlS.l4CZi5Orere0LHsdv8NaYiV.Vi', 'sW0IpYiIEHhSZfwJhR8VCgSJ9QN3XJWuuiuVCmD27oBwBpVkmEiZPn3cZHjP', '2018-04-03 18:31:40', '2018-04-03 18:31:40'),
+(4, 'myaasdn', NULL, 'night@asd.com', '$2y$10$aQMZgqatbbMAkohn.P6dJOat6aZ2x0RT/XQtqM0DleNwc23s0tkMe', 'DotKp4QAgk6zXFdiIBzaLQO44N6wQWcrTvtmvqW2hfcGnS2Fz2AtGxREcynt', '2018-04-26 20:49:03', '2018-04-26 20:49:03');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
