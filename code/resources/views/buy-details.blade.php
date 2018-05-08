@@ -59,7 +59,7 @@
 						</div>
 						<div class="card-body">
 							@foreach($posts as $post)
-							<p>Item Name: {{ $post->postTitle}}</p>
+							<p>Item Name: {{ $post->postTitle }}</p>
 							@endforeach
 						<form>
 							<div class="form-group">

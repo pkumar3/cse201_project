@@ -40,21 +40,23 @@
 			<hr>
 
 			<div class="row">
-				<div class="col-md-12">
+				@foreach($posts as $post)
+				<div class="col-4">
+					
 					<div class="card" style="width: 15rem;">
 					  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
 					  <div class="card-body">
-					    <h5 class="card-title">Sharpie</h5>
+					    <h5 class="card-title">{{ $post->postTitle }}</h5>
 					    <p class="card-text">Quantity: 3</p>
 					    <p class="card-text">Price Limit: $2</p>
-					    @foreach($posts as $post)
-					    <p class="card-text">Posted On: {{ $post->creattionDate }}</p>
-					    @endforeach
+					    <p class="card-text">Posted On: {{ $post->creationDate }}</p>
 					    <a href="/buy-details" class="btn btn-primary">Edit</a>
 					    <a href="/buy-details" id="delete-button" class="btn btn-primary">Delete</a>
 					  </div>
 					</div>	
+					
 				</div>
+				@endforeach
 			</div><!-- /.row -->
 
 		</div>
