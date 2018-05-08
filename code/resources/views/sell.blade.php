@@ -39,21 +39,24 @@
 			</div><!-- /.row -->
 
 			<hr>
-
 			<div class="row">
-				<div class="col-md-12">
+				@foreach($posts as $post)
+				<div class="col-4">
+					
 					<div class="card" style="width: 15rem;">
-					  <div class="card-header">
-					  	Test
-					  </div>
+					  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
 					  <div class="card-body">
-					    <h5 class="card-title">Sharpie</h5>
-					    <p class="card-text">Quantity: 3</p>
-					    <p class="card-text">Price: $2</p>
-					    <a href="#" id="contact-button" class="btn btn-primary">Contact</a>
+					  <form action="editPost" method="post" style="display:contents">
+						<h5 class="card-title">{{ $post->postTitle }}</h5>
+						<p class="card-text">Quantity: {{$post->postQty}}</p>
+						<p class="card-text">Price Limit: ${{$post->postPrice}}</p>
+						<p class="card-text">Posted On: {{ $post->creationDate }}</p>
+						 <a href="#" id="contact-button" class="btn btn-primary">Contact</a>
+						</form>
 					  </div>
-					</div>	
+					</div>		
 				</div>
+				@endforeach
 			</div><!-- /.row -->
 
 		</div>
