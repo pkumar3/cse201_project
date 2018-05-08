@@ -45,7 +45,7 @@ Route::post('createPost', function(){
 	DB::table('posts')->insert(
 		[ 'postTitle' => $postTitle, 'postQTY' => $qty, 'postPrice' => $price ]
 	);
-	header('location:home');
+	header('location:my-posts');
 	die();
 });
 
