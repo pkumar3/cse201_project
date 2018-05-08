@@ -4,6 +4,7 @@
 <style type="text/css">
 	#main-wrapper {
 		background-color: #f24f5f;
+        height:30%;
 	}
 
 	#next-button {
@@ -23,6 +24,10 @@
         font-size: 20px;
     }
 
+    /*#form {
+        width: 80%;
+    }*/
+
     .icon {
         margin-top: 2%;
         margin-bottom: 1%;
@@ -39,6 +44,11 @@
     }
 
 	@media screen and (min-width: 768px) {
+
+        #main-wrapper {
+            height: 60%;
+        }
+
 		h1 {
 			padding-top: 2%;
 		}
@@ -54,6 +64,15 @@
 		#search {
 			padding-top: 5%;
 		}
+
+        #search-bar {
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        #next-button {
+            margin-left: -60%;
+        }
 
 		.icon {
 			margin-top: 2%;
@@ -83,7 +102,7 @@
 			</div>
 
 			<div class="row justify-content-center" id="search">
-				<div class="col-6">
+				<div id="form" class="col-8">
 					<input type="text" class="form-control" placeholder="What would you like to buy?" id="search-bar" name="">
 				</div>
 				<div class="col-2">

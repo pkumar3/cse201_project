@@ -4,7 +4,11 @@
 <style type="text/css">
 	#main-wrapper {
 		background-color: #f24f5f;
-		height: 100vh;
+		height: 100%;
+	}
+
+	#delete-button {
+		margin-left: 5%;
 	}
 
 	@media screen and (min-width: 768px) {
@@ -33,6 +37,8 @@
 				</div>
 			</div><!-- /.row -->
 
+			<hr>
+
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card" style="width: 15rem;">
@@ -40,8 +46,12 @@
 					  <div class="card-body">
 					    <h5 class="card-title">Sharpie</h5>
 					    <p class="card-text">Quantity: 3</p>
-					    <p class="card-text">Price: $2</p>
+					    <p class="card-text">Price Limit: $2</p>
+					    @foreach($posts as $post)
+					    <p class="card-text">Posted On: {{ $post->creattionDate }}</p>
+					    @endforeach
 					    <a href="/buy-details" class="btn btn-primary">Edit</a>
+					    <a href="/buy-details" id="delete-button" class="btn btn-primary">Delete</a>
 					  </div>
 					</div>	
 				</div>

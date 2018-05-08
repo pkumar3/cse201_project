@@ -20,4 +20,11 @@ class HomeController extends Controller
 
         return view('buy-Details', ['posts' => $posts]);
     }
+
+    public function myPosts()
+    {
+    	$posts = DB::table('posts')->get();
+
+    	return view('my-posts', ['posts' => $posts]);
+    }
 }

@@ -26,11 +26,9 @@ Route::get('home', function () {
 });
 
 	
-Route::get('buy-details', ['uses' => 'homeController@getPosts']);
+Route::get('buy-details', ['uses' => 'HomeController@getPosts']);
 
-Route::get('my-posts', function () {
-    return view('my-posts');
-});
+Route::get('my-posts', ['uses' => 'HomeController@myPosts']);
 
 Route::get('sell', function () {
     return view('sell');
