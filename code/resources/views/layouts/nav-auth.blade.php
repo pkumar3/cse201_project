@@ -9,7 +9,8 @@
             <ul class="navbar-nav">
                 <div class="p-2"><li><a href="/my-posts">My Posts</a></li></div>
                 <div class="p-2"><li><a href="/sell">Sell</a></li></div>
-                <div class="p-2"><li><a href=""><i class="fas fa-user"></i>{{ Auth::user()->name }}</a></li></div>
+                <div class="p-2"><li class="dropdown"><a href="#"><i class="fas fa-user"></i>{{ Auth::user()->name }}</a></li></div>
+                <div class="p-2"><li><a href="/logout">Logout</a></li></div>
             </ul>
         </div><!-- /.nav-collapse -->
     </div>
